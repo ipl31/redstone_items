@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "redstone_items",
+	"version": "${version}",
+	"name": "redstone_items",
+	"description": "Redstone Tools and Weapons",
+	"authors": [
+		"ken@ipl31.net"
+	],
+	"contact": {
+		"homepage": "https://kc2.io",
+		"sources": "https://github.com/ipl31/redstone_items"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/kc2.io_redstone_items/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.kc2.minecraft.mods.RedStoneItems"
+		],
+		"client": [
+			"io.kc2.minecraft.mods.RedstoneItemsClient"
+		],
+		"fabric-datagen": [
+			"io.kc2.minecraft.mods.RedStoneItemsDataGenerator"
+		]
+	},
+	"mixins": [
+		"kc2.io_redstone_items.mixins.json",
+		{
+			"config": "kc2.io_redstone_items.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
