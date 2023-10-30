@@ -29,10 +29,10 @@ public class RedStoneItems implements ModInitializer {
 
 		LOGGER.info("Loading redstone-items-kc-io");
 		// Register custom items:
-		Registry.register(Registries.ITEM, new Identifier("kc2.io:redstone_items", "redstone_pickaxe"), REDSTONE_PICKAXE);
-		Registry.register(Registries.ITEM, new Identifier("kc2.io:redstone_items", "redstone_axe"), REDSTONE_AXE);
-		Registry.register(Registries.ITEM, new Identifier("kc2.io:redstone_items", "redstone_hoe"), REDSTONE_HOE);
-		Registry.register(Registries.ITEM, new Identifier("kc2.io:redstone_items", "redstone_sword"), REDSTONE_SWORD);
+		Registry.register(Registries.ITEM, new Identifier("redstone_items", "redstone_pickaxe"), REDSTONE_PICKAXE);
+		Registry.register(Registries.ITEM, new Identifier("redstone_items", "redstone_axe"), REDSTONE_AXE);
+		Registry.register(Registries.ITEM, new Identifier("redstone_items", "redstone_hoe"), REDSTONE_HOE);
+		Registry.register(Registries.ITEM, new Identifier("redstone_items", "redstone_sword"), REDSTONE_SWORD);
 		// Add custom items to inventory:
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {content.add(REDSTONE_PICKAXE); });
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {content.add(REDSTONE_AXE); });
@@ -41,20 +41,3 @@ public class RedStoneItems implements ModInitializer {
 
 	}
 }
-
-/*
-	public static ToolItem REDSTONE_PICKAXE = new PickaxeItem(RedStoneToolMaterial.INSTANCE, 7, -5.8F, new FabricItemSettings());
-
-	public static final Logger LOGGER = LoggerFactory.getLogger("DadsMod");
-	@Override
-	public void onInitialize() {
-		LOGGER.info("Loading DadsMod!!");
-		Registry.register(Registries.ITEM, new Identifier("tutorial", "custom_item"), CUSTOM_ITEM);
-		Registry.register(Registries.ITEM, new Identifier("tutorial", "redstone_pickaxe"), REDSTONE_PICKAXE);
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {content.add(REDSTONE_PICKAXE); });
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(CUSTOM_ITEM);
-		});
-	}
-
-
- */

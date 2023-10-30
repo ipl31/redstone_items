@@ -1,18 +1,18 @@
 {
 	"schemaVersion": 1,
-	"id": "redstone-tools-weapons-armor",
+	"id": "redstone_items",
 	"version": "${version}",
-	"name": "redstone-tools-weapons-armor",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "redstone_items",
+	"description": "Redstone Tools and Weapons",
 	"authors": [
-		"Me!"
+		"ken@ipl31.net"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://kc2.io",
+		"sources": "https://github.com/ipl31/redstone_items"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/redstone-tools-weapons-armor/icon.png",
+	"icon": "assets/kc2.io_redstone_items/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -26,9 +26,9 @@
 		]
 	},
 	"mixins": [
-		"redstone-tools-weapons-armor.mixins.json",
+		"kc2.io_redstone_items.mixins.json",
 		{
-			"config": "redstone-tools-weapons-armor.client.mixins.json",
+			"config": "kc2.io_redstone_items.client.mixins.json",
 			"environment": "client"
 		}
 	],
